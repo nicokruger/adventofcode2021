@@ -9,12 +9,6 @@
 
 using namespace std;
 
-struct LifeSupport {
-  int oxygen;
-  int co2;
-  LifeSupport(int o, int c) : oxygen(o), co2(c) { };
-};
-
 int binary_string_to_decimal(const std::string &line) {
   int base = pow(2, line.size()-1);
 
