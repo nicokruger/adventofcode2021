@@ -16,20 +16,20 @@ struct Eg {
 };
 
 Eg gamma(const std::vector<string> &lines) {
-  vector<int> counts(lines[0].size()); // lol 20
+  vector<int> counts(lines[0].size());
 
   for (auto l : lines) {
     int pos = 0;
     for (auto c : l) {
+      if (pos >= counts.size()) {
+        throw -1;
+      }
       if (c == '1') {
         counts[pos]++;
       } else {
         counts[pos]--;
       }
       pos++;
-      if (pos >= 20) {
-        throw -1;
-      }
     }
   }
   int gamma = 0;
