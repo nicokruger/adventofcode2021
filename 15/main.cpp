@@ -98,16 +98,6 @@ void run() {
 
   map<int,int> digit_counts = get_ons(lines);
   cout << "answer: " << ( (digit_counts[1] + digit_counts[4] + digit_counts[7] + digit_counts[8])) << endl;
-  /*
-  auto nums_s = split_line_by_comma(lines[0]);
-  vector<int> nums;
-  for (string num_s : nums_s) {
-    nums.push_back(std::stoi(num_s));
-  }
-
-  Result best = find_closest_distance(nums);
-  cout << "best fuel=" << best.fuel << endl;
-  */
 }
 
 int main() {
